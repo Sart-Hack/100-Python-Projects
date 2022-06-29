@@ -27,7 +27,9 @@ print("".join(guess_word))
 while True:
 
     guess_letter = input("Enter the letter you want to guess.\n")
-    if guess_letter in target_word:
+    if guess_letter in guess_word:
+        print(f"You've already guessed {guess_letter}")
+    elif guess_letter in target_word:
         for i in range(len(target_word)):
             if guess_letter == target_word[i]:
                 guess_word[i] = guess_letter
