@@ -23,7 +23,7 @@ guess_word = ["_"]*len(target_word)
 counter = 0
 print(target_word)
 
-print("".join(guess_word))
+print(" ".join(guess_word))
 while True:
 
     guess_letter = input("Enter the letter you want to guess.\n")
@@ -33,7 +33,7 @@ while True:
         for i in range(len(target_word)):
             if guess_letter == target_word[i]:
                 guess_word[i] = guess_letter
-        print("".join(guess_word))
+        print(" ".join(guess_word))
 
         if "_" not in guess_word:
             print("You guessed the word. You Win!")

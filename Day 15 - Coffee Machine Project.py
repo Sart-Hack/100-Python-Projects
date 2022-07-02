@@ -53,11 +53,12 @@ def report(resources, money):
 
 
 def is_sufficient_resources(coffee_type, MENU, resources):
+    is_sufficient = True
     for key in MENU[coffee_type]["ingredients"]:
         if MENU[coffee_type]["ingredients"][key] > resources[key]:
             print(f"Sorry there isn't enough {key}")
-            return False
-    return True
+            is_sufficient = False
+    return is_sufficient
 
 def process_coins(): # returns the amount of money entered
     quarters = int(input("Enter number of quarters\n")) * 0.25
